@@ -238,7 +238,7 @@ function FindMostExpensiveOrder(usersArr) {
       console.log(`User ${user.name} has the most expensive order: ${mostExpensiveOrder.name} за цiною - ${highestPrice} UAH`);
     } else{
       console.log(`User ${user.name} does not have any orders`);
-    }
+  }
   }
 }
 
