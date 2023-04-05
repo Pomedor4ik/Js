@@ -1,3 +1,24 @@
+let userInfo = {
+  name: "Fedor",
+  age: 15,
+}
+
+let userBackEnd = {
+  login: "fedor-pomedor",
+  passward: "codRed228",
+  email: "fedorGGpomedorWP.com",
+  confirmMail: true,
+}
+
+for (key in userBackEnd){
+  userInfo[key] = userBackEnd[key]
+}
+
+console.log(userInfo)
+//===================================================
+
+
+
 // const miles = 10;
 // const kilometers = convertMilesToKilometers(miles);
 
@@ -136,6 +157,102 @@
 
 
 
+// ------------------------------------------------------------------------
+
+
+
+// const getTotalPrice = (user) => {
+//   let totalPrice = 0
+//   for (let i = 0; i < user.orders.length; i++){
+//       totalPrice += user.orders[i].price * user.orders[i].count
+//   }
+//   return totalPrice
+// }
+// const getPiceForAllUsers = (usersArr) => { 
+//   for (let i = 0; i < usersArr.length; i++){
+//       console.log(`Total price in user ${usersArr[i].name}: ${getTotalPrice(usersArr[i])} грн.`)
+//   }
+// }
+
+// let usersArr = [
+//   { 
+//   name: "Alex",
+//   age: 30,
+//   confirmEmail: false,
+//   description: null,
+//   orders: [
+//           {
+//               name: "TV",
+//               count: 2,
+//               price: 4000 
+//           },
+//           {
+//               name: "PC",
+//               count: 1,
+//               price: 6000
+//           },
+//           {
+//               name: "Phone",
+//               count: 3,
+//               price: 8000
+//           },
+//           {
+//               name: "Delivery", 
+//               count: 1,
+//               price: 300
+//           }
+//       ]
+//   }, 
+//   {
+//       name: "John",
+//       age: 27,
+//       confirmEmail: true,
+//       description: null,
+//       orders: [
+//           {
+//               name: "Phone",
+//               count: 4,
+//               price: 4000
+//           },
+//           {
+//               name: "Delivery",
+//               count: 1,
+//               price: 300
+//           }
+//       ]
+//   },
+//   {
+//       name: "Bob",
+//       age: 17,
+//       confirmEmail: true,
+//       description: null,
+//       orders: []
+//   }
+// ]
+
+// getPiceForAllUsers(usersArr)
+
+// function FindMostExpensiveOrder(usersArr) {
+//   for (let i = 0; i < usersArr.length; i++){  
+//     let user = usersArr[i];
+//     let mostExpensiveOrder = null;
+//     let highestPrice = 0;
+//     for (let j = 0; j < user.orders.length; j++){
+//       let order = user.orders[j];
+//       if (order.price > highestPrice){
+//         mostExpensiveOrder = order;
+//         highestPrice = order.price;
+//       }
+//     }
+//     if (mostExpensiveOrder != null) {
+//       console.log(`User ${user.name} has the most expensive order: ${mostExpensiveOrder.name} за цiною - ${highestPrice} UAH`);
+//     } else{
+//       console.log(`User ${user.name} does not have any orders`);
+//   }
+//   }
+// }
+
+// FindMostExpensiveOrder(usersArr)
 
 
 
@@ -147,99 +264,3 @@
 
 
 
-
-
-
-
-const getTotalPrice = (user) => {
-  let totalPrice = 0
-  for (let i = 0; i < user.orders.length; i++){
-      totalPrice += user.orders[i].price * user.orders[i].count
-  }
-  return totalPrice
-}
-const getPiceForAllUsers = (usersArr) => { 
-  for (let i = 0; i < usersArr.length; i++){
-      console.log(`Total price in user ${usersArr[i].name}: ${getTotalPrice(usersArr[i])} грн.`)
-  }
-}
-
-let usersArr = [
-  { 
-  name: "Alex",
-  age: 30,
-  confirmEmail: false,
-  description: null,
-  orders: [
-          {
-              name: "TV",
-              count: 2,
-              price: 4000 
-          },
-          {
-              name: "PC",
-              count: 1,
-              price: 6000
-          },
-          {
-              name: "Phone",
-              count: 3,
-              price: 8000
-          },
-          {
-              name: "Delivery", 
-              count: 1,
-              price: 300
-          }
-      ]
-  }, 
-  {
-      name: "John",
-      age: 27,
-      confirmEmail: true,
-      description: null,
-      orders: [
-          {
-              name: "Phone",
-              count: 4,
-              price: 4000
-          },
-          {
-              name: "Delivery",
-              count: 1,
-              price: 300
-          }
-      ]
-  },
-  {
-      name: "Bob",
-      age: 17,
-      confirmEmail: true,
-      description: null,
-      orders: []
-  }
-]
-
-getPiceForAllUsers(usersArr)
-
-function FindMostExpensiveOrder(usersArr) {
-  for (let i = 0; i < usersArr.length; i++){
-    let user = usersArr[i];
-    let mostExpensiveOrder = null;
-    let highestPrice = 0;
-    for (let j = 0; j < user.orders.length; j++){
-      let order = user.orders[j];
-      if (order.price > highestPrice){
-        mostExpensiveOrder = order;
-        highestPrice = order.price;
-      }
-    }
-    if (mostExpensiveOrder != null) {
-      console.log(`User ${user.name} has the most expensive order: ${mostExpensiveOrder.name} за цiною - ${highestPrice} UAH`);
-    } else{
-      console.log(`User ${user.name} does not have any orders`);
-  }
-  }
-}
-
-FindMostExpensiveOrder(usersArr)
