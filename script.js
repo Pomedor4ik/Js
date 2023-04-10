@@ -1,258 +1,264 @@
-let userInfo = {
-  name: "Fedor",
-  age: 15,
+function calculateAverage(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum / numbers.length;
 }
 
-let userBackEnd = {
-  login: "fedor-pomedor",
-  passward: "codRed228",
-  email: "fedorGGpomedorWP.com",
-  confirmMail: true,
+function findMax(numbers) {
+  let max = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
 
-for (key in userBackEnd){
-  userInfo[key] = userBackEnd[key]
+let numbers = [4, 10, 2, 8, 26, 5];
+let average = calculateAverage(numbers);
+console.log("Середнє значення масиву:", average);
+
+let max = findMax(numbers);
+console.log("Елемент з найбільшим числом:", max);
+
+const miles = 10;
+const kilometers = convertMilesToKilometers(miles);
+
+function convertMilesToKilometers(miles) {
+  const kilometers = miles * 1.60934;
+  return kilometers;
 }
 
-console.log(userInfo)
-//===================================================
+console.log(kilometers);
 
 
 
-// const miles = 10;
-// const kilometers = convertMilesToKilometers(miles);
 
-// function convertMilesToKilometers(miles) {
-//   const kilometers = miles * 1.60934;
-//   return kilometers;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let userInfo = {
+//   name: "Fedor",
+//   age: 15,
 // }
 
-// console.log(kilometers);
-
-
-
-
-
-//===================================================
-
-
-
-
-
-// function calculateAverage(numbers) {
-//   let sum = 0;
-//   for (let i = 0; i < numbers.length; i++) {
-//     sum += numbers[i];
-//   }
-//   return sum / numbers.length;
+// let userBackEnd = {
+//   login: "fedor-pomedor",
+//   passward: "codRed228",
+//   email: "fedorGGpomedorWP.com",
+//   confirmMail: true,
 // }
 
-// function findMax(numbers) {
-//   let max = numbers[0];
-//   for (let i = 1; i < numbers.length; i++) {
-//     if (numbers[i] > max) {
-//       max = numbers[i];
+// for (key in userBackEnd){
+//   userInfo[key] = userBackEnd[key]
+// }
+
+// console.log(userInfo)
+
+
+
+
+
+// Допустим нам известно: слово в зашифрованном виде 'ponyb' 
+// и то что оригинальное слово начинается с 'f' 
+
+// let str = 'ponyb'
+// let originalText = []
+// let text = ''
+
+// let key = 0 
+
+// let alph = ['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm',
+//  'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v','w', 'x', 'y', 'z']
+
+
+// for (let i = 0; i < str.length; i++) {
+//     console.log(str[i])
+//     let symbolIndex = 0
+//     alph.forEach((s,index) => {
+//         if (s == str[i].toLowerCase()) {
+//             symbolIndex = index
+//         }
+//         if (s == 'f'.toLowerCase()) {
+//             symbolIndex1 = index
+//         }
+//         if (s == 'p'.toLowerCase()) {
+//             symbolIndex2 = index
+//         }
+//     })
+//     if (symbolIndex - key < 0) {
+//         symbolIndex = symbolIndex + alph.length
 //     }
+   
+//     key = symbolIndex2 - symbolIndex1
+//     originalText.push(alph[symbolIndex-key])    
+// }
+// console.log(`вы добыли ключ : key = ${key}`)
+// console.log(originalText)
+
+// let parseArrToStr = (originalText) => {
+//     // массив преобразуем в строку 
+//     let text = ''
+//     arr.forEach((symbol) => {
+//         text += symbol
+//     })
+//     return text
+    
+// }
+// console.log(text)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// шифр 
+
+
+// let alph = ['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm',
+//  'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v','w', 'x', 'y', 'z']
+
+// const decode = (code, key) => {
+//   for(let i = 0; i < code.length; i++) {  
+//     let indexSymbol = 0
+//     alph.forEach((symbol, index) => {
+//       if(symbol == code[i]){
+//         indexSymbol = index
+//       }
+//     })
+//     result += alph[indexSymbol - key]
 //   }
-//   return max;
+//   return result
 // }
 
-// let numbers = [4, 10, 2, 8, 26, 5];
-// let average = calculateAverage(numbers);
-// console.log("Середнє значення масиву:", average);
-
-// let max = findMax(numbers);
-// console.log("Елемент з найбільшим числом:", max);
 
 
 
 
 
-//===================================================
+// обьект
 
 
-
-
-
-// function getQuantity() {
-//   let quantity = prompt("Введіть кількість чисел:")
-//   if (isNaN(quantity) || quantity <= 0) {
-//     alert("Введіть будь ласка ціле числове значення більше 0")
-//     return null;
-//   }
-//   return quantity;
-// }
-
-// function getOddNumbers(quantity) {
-//   let i = 1;
-//   let output = "";
-//   while (quantity > 0) {
-//     if (i % 2 !== 0) {
-//       output += i + " "
-//       quantity--;
-//     }
-//     i++;
-//   }
-//   return output;
-// }
-
-// function main() {
-//   const quantity = getQuantity();
-//   if (quantity !== null) {
-//     const oddNumbers = getOddNumbers(quantity);
-//     alert("Непарні числа: " + oddNumbers);
-//   }
-// }
-
-// main();
-
-
-
-
-
-
-//=======================================
-
-
-
-
-
-
-
-// function getBirthYear() {
-//   let birthYear = prompt("У якому році ви народились?");
-//   while (isNaN(birthYear)) {
-//     alert("Введіть будь ласка ціле числове значення");
-//     birthYear = prompt("Уважно! У якому році ви народились?");
-//   }
-//   return parseInt(birthYear);
-// }
-
-// function calculateAge(birthYear) {
-//   const currentYear = new Date().getFullYear();
-//   const age = currentYear - birthYear;
-//   return age;
-// }
-
-// function checkAge(age) {
-//   const answer = prompt(`Вам зараз ${age} років так чи ні ?`);
-//   if (answer.toLowerCase() == "так") {
-//     alert("Вірно!");
-//   } else {
-//     alert("Неправильно!");
+// let user = {
+//   name: 'Fedor',
+//   age: 15,
+//   mail: "frdor@gmail.com",
+//   getName() {
+//     return this.name
 //   }
 // }
 
-// function main() {
-//   const birthYear = getBirthYear();
-//   const age = calculateAge(birthYear);
-//   alert(`Вам ${age} років!`);
-//   if (age > 100) {
-//     alert("І Ви брехло !");
-//   }
-//   checkAge(age);
+// let backEndInfo = {
+//   name: "John",
+//   login: "abc",
+//   password: "password123"
 // }
 
-// main();
+// let statusRequest = "OK"
 
-
-
-// ------------------------------------------------------------------------
-
-
-
-// const getTotalPrice = (user) => {
-//   let totalPrice = 0
-//   for (let i = 0; i < user.orders.length; i++){
-//       totalPrice += user.orders[i].price * user.orders[i].count
-//   }
-//   return totalPrice
-// }
-// const getPiceForAllUsers = (usersArr) => { 
-//   for (let i = 0; i < usersArr.length; i++){
-//       console.log(`Total price in user ${usersArr[i].name}: ${getTotalPrice(usersArr[i])} грн.`)
-//   }
+// let user2 = {
+//   ...user,
+//   ...backEndInfo,
+//   name: user.name,
+//   statusRequest
 // }
 
-// let usersArr = [
-//   { 
-//   name: "Alex",
-//   age: 30,
-//   confirmEmail: false,
-//   description: null,
-//   orders: [
-//           {
-//               name: "TV",
-//               count: 2,
-//               price: 4000 
-//           },
-//           {
-//               name: "PC",
-//               count: 1,
-//               price: 6000
-//           },
-//           {
-//               name: "Phone",
-//               count: 3,
-//               price: 8000
-//           },
-//           {
-//               name: "Delivery", 
-//               count: 1,
-//               price: 300
-//           }
-//       ]
-//   }, 
-//   {
-//       name: "John",
-//       age: 27,
-//       confirmEmail: true,
-//       description: null,
-//       orders: [
-//           {
-//               name: "Phone",
-//               count: 4,
-//               price: 4000
-//           },
-//           {
-//               name: "Delivery",
-//               count: 1,
-//               price: 300
-//           }
-//       ]
-//   },
-//   {
-//       name: "Bob",
-//       age: 17,
-//       confirmEmail: true,
-//       description: null,
-//       orders: []
-//   }
+// let prices = [123, 2442, 231, 542]
+
+// let newPrices = [
+//   -100,
+//   ...prices,
+//   999
 // ]
 
-// getPiceForAllUsers(usersArr)
+// console.log("newPrices")
 
-// function FindMostExpensiveOrder(usersArr) {
-//   for (let i = 0; i < usersArr.length; i++){  
-//     let user = usersArr[i];
-//     let mostExpensiveOrder = null;
-//     let highestPrice = 0;
-//     for (let j = 0; j < user.orders.length; j++){
-//       let order = user.orders[j];
-//       if (order.price > highestPrice){
-//         mostExpensiveOrder = order;
-//         highestPrice = order.price;
-//       }
-//     }
-//     if (mostExpensiveOrder != null) {
-//       console.log(`User ${user.name} has the most expensive order: ${mostExpensiveOrder.name} за цiною - ${highestPrice} UAH`);
-//     } else{
-//       console.log(`User ${user.name} does not have any orders`);
-//   }
+
+
+
+
+// массове копіювання
+
+// let user = {
+//   name: 'John',
+//   age: 15,
+//   order: {
+//     name: "phone",
+//     price: 100,
+//     count: 1
 //   }
 // }
 
-// FindMostExpensiveOrder(usersArr)
+// let newUser = {
+//   ...user,
+//   order: {
+//     ...user.order
+//   }
+// }
+// console.log(newUser)
+
+
+
+
+
+
+// let newOrder = {
+//   name: "Computer",
+//   price: 400,
+//   count: 1
+// }
+
+// let user = {
+//   name: 'John',
+//   age: 15,
+//   orders: [
+    // {
+    //   name: "ЕМ",
+    //   price: 1000,
+    //   count: 1
+    // }
+//   ],
+//   sum: 1000
+  
+// }
+
+
+// user = {
+//   ...user,
+//   orders: [
+//     ...user.orders,
+//     {
+//       ...newOrder
+//     } 
+//   ],
+//   sum: user.sum + newOrder.price * newOrder.count,
+//   phone: "+3808880008080"
+// }
+
+// console.log(user)
 
 
 
@@ -260,7 +266,42 @@ console.log(userInfo)
 
 
 
+// let address = {
+//   country: "US",
+//   city: "New York",
+//   postCode: "95031"
+// }
+
+// let country = address.country
+// let city = address.city
+// let countryCode = address.countryCod
+// =
+// let {country, city, postCode} = address
+// console.log(`${country} ${city} ${postCode}`)
+
+
+// let orders = [
+
+// ] 
 
 
 
+// const user = {
+//     name: 'John',
+//     age: 30,
+//     email: 'frdor@gmail.com',
+//     orders: [
+//       {
+//         name: "DVD",
+//         price: 1000,
+//         count: 1
+//       }
+//     ]
+//   };
 
+
+  
+//   const updatedUser = {
+//     ...user,
+//     orders: [...user.orders, order]
+//   };
