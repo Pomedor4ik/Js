@@ -1,47 +1,139 @@
-function calculateAverage(numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  return sum / numbers.length;
-}
-
-function findMax(numbers) {
-  let max = numbers[0];
-  for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] > max) {
-      max = numbers[i];
+const user1 = {
+  name: "John",
+  age: 18,
+  orders: [
+    {
+      name: "Phone",
+      price: 1000,
+      count: 1
+    },
+    {
+      name: "TV",
+      price: 700,
+      count: 1
+    },
+    {
+      name: "Keyboard",
+      price: 400,
+      count: 1
     }
+  ],
+};
+
+const user2 = {
+  name: "Bob",
+    age: 25,
+    orders: [
+    {
+      name: "DVD",
+      price: 500,
+      count: 3
+    },
+    {
+      name: "Laptop",
+      price: 2000,
+      count: 2
+    },
+    {
+      name: "Fridge",
+      price: 1500,
+      count: 1
+    }
+  ],
+};
+
+const user1Copy = {
+  ...user1,
+  orders: [...user1.orders]
+};
+
+const user2Copy = {
+  ...user2,
+  orders: [...user2.orders]
+};
+
+console.log("User 1:", user1Copy);
+console.log("User 2:", user2Copy);
+
+function sum(user) {
+  let total = 0;
+  for (const order of user.orders) {
+    total += order.price * order.count;
   }
-  return max;
+  return total;
 }
 
-let numbers = [4, 10, 2, 8, 26, 5];
-let average = calculateAverage(numbers);
-console.log("Середнє значення масиву:", average);
-
-let max = findMax(numbers);
-console.log("Елемент з найбільшим числом:", max);
-
-const miles = 10;
-const kilometers = convertMilesToKilometers(miles);
-
-function convertMilesToKilometers(miles) {
-  const kilometers = miles * 1.60934;
-  return kilometers;
-}
-
-console.log(kilometers);
 
 
 
 
+console.log("Orders sum of user 1:", sum(user1Copy),`UAH`);
+console.log(`That included VAT(20%) - ${Math.floor(sum(user1Copy) / 6)} UAH`)
+
+
+console.log("Orders sum of user 2:", sum(user2Copy),`UAH`);
+console.log(`That included VAT(20%) - ${Math.floor(sum(user2Copy) / 6)} UAH`)
+ 
 
 
 
+// let orders = [
+//   {
+//     name: 'Phone',
+//     price:  300,
+//     count: 1
+//   },
+//   {
+//     name: 'DVD',
+//     price:  200,
+//     count: 1
+//   }
+// ]
+
+// let users = orders.map(order => {
+//   return {
+//     name: 'Bob',
+//     orders: order
+//   }
+// })
+
+// console.log(users)
 
 
 
+// const newOrder = {
+//   name:"Computer",
+//   price: 300,
+//   count: 1
+// };
+
+// const user = {
+//   name: "John",
+//   age: 15,
+//   email: "john@example.com",
+//   orders: [
+//     {
+//       name:"DVD",
+//       price: 500,
+//       count: 1
+//     }
+//   ],
+//   sum: 500
+// };
+
+// user = {
+//   ...user,
+//   orders: [
+//     ...user.orders, 
+//     {
+//       ...newOrder
+//     }  
+//   ],
+//   sum: user.sum + newOrder.price * newOrder.count,
+// }
+
+
+// console.log(user);
 
 
 
