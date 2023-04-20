@@ -4,45 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <title>js</title>
 </head>
 <body>
-
-
-    <h1 id="myText">СЛАВА УКРАЇНІ</h1>
-    <button onclick="changeTheme()">ГЕРОЯМ СЛАВА</button>
-
-
-<!-- ==================================================================== -->
-
-
-    <!-- <div class="block"></div>
-    <input id="inputColors" type="color">
-    <button id="btnChenger">Натисни на мене</button> -->
-
-
-<!-- ==================================================================== -->
-
-
-
-    <!-- <h1>Що хочете замовити</h1>
-    <form id="orderForm">
-        <label for="productInput">Товар:</label>
-        <input type="text" id="productInput" required>
-        <label for="quantityInput">Кількість:</label>
-        <input type="number" id="quantityInput" required>
-        <button type="submit">Додати замовлення</button>
-    </form>
-    <ul id="orderList"></ul> -->
-
-
-    <style>
-        .block {
-            width: 400px;
-            height: 400px;
-        }
-    </style>
+    <div id="myTime" class="container">
+        <table>
+            <tr id="timeRow">
+                <td class="time-td" id="hoursCell"></td>
+                <td class="time-td" id="minutesCell"></td>
+                <td class="time-td" id="secondsCell"></td>
+            </tr>
+        </table>
+        <button onclick="changeTheme()">Theme</button>
+    </div>
+    <header>
+        <img class="logo" src="./pictures/Logo_TV_2015.svg" alt="">
+        <ul class="burger">
+            <li class="burger-li">Shop</li>
+            <li class="burger-li">About Us</li>
+            <li class="burger-li">Contacts</li>
+        </ul>
+    </header>
+    <main>
+        <div class="main-blocks-container">
+            <div class="main-block">
+                <img class="pic-logos" src="./pictures/Adidas_Logo.svg.png" alt="">
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="main-block">
+                <img class="pic-logos" src="./pictures/Apple_logo_black.svg.png" alt="">
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="main-block">
+                <img class="pic-logos1" src="./pictures/Logo_NIKE.svg.png" alt="">
+                <button class="buy-btn1">Buy</button>
+            </div>
+            <div class="main-block">
+                <img class="pic-logos2" src="./pictures/2560px-Puma_logo.svg.png" alt="">
+                <button class="buy-btn1">Buy</button>
+            </div>
+        </div>
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>                  

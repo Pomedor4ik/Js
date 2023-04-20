@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(221, 221, 221);
+  }
+  
+  #time-table {
+    background-color: #f8f8f8;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #current-time {
+    font-size: 24px;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: rgb(146, 147, 156);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .time-td{
+    width: 50px;
+  }
+header {
+    width: 100%;
+    height: 100px;
+    background: rgb(165, 167, 177);
+    display: flex;
+    align-items: center ;
+
+}
+.logo{
+    width: 30%;
+    height: 80px;
+    padding-left: 160px;
+}
+.burger{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.burger-li{
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+.main-blocks-container{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px    ;
+}
+.main-block{
+    width: 250px;
+    height: 250px;
+    background: rgb(146, 146, 146);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pic-logos{
+    width: 150px;
+    height: 150px;
+    padding-bottom: 20px;
+}
+.pic-logos1{
+    width: 150px;
+    height: 100px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.pic-logos2{
+    width: 150px;
+    height: 100px;
+
+    padding-left: 20px;
+}
+.buy-btn{
+    width: 80px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+.buy-btn1{
+    width: 80px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 47px;
+}
