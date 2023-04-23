@@ -10,26 +10,23 @@
     <title>js</title>
 </head>
 <body>
-    <div id="myTime" class="container">
+    <div id="myTime" class="container"> 
+        <p class="hello">
+            Welcome
+        </p>
         <table>
             <tr id="timeRow">
                 <td class="time-td" id="hoursCell"></td>
                 <td class="time-td" id="minutesCell"></td>
                 <td class="time-td" id="secondsCell"></td>
             </tr>
+            
         </table>
-        <button onclick="changeTheme()">Theme</button>
+        <button class="Theme-block" onclick="changeTheme()">Theme</button>
+        <a class="regiser" href="./register.html">Profile</a>
     </div>
-    <header>
-        <img class="logo" src="./pictures/Logo_TV_2015.svg" alt="">
-        <ul class="burger">
-            <li class="burger-li">Shop</li>
-            <li class="burger-li">About Us</li>
-            <li class="burger-li">Contacts</li>
-        </ul>
-    </header>
     <main>
-        <div class="main-blocks-container">
+        <!-- <div class="main-blocks-container">
             <div class="main-block">
                 <img class="pic-logos" src="./pictures/Adidas_Logo.svg.png" alt="">
                 <button class="buy-btn">Buy</button>
@@ -47,6 +44,13 @@
                 <button class="buy-btn1">Buy</button>
             </div>
         </div>
+        <form class="notes-block" id="note-form">
+            <input type="text" id="note-input" placeholder="Введіть текст нотатки" />
+            <input type="color" id="color-input" />
+            <button type="submit">Додати нотатку</button>
+        </form> -->
+        <div id="note-list"></div>
+
     </main>
     <script src="./script.js"></script>
 </body>

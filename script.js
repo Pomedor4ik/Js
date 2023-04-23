@@ -45,3 +45,41 @@ const changeTheme = () => {
       timeElement.style.backgroundColor = "black";
     }
   }
+// =========================================
+
+document.getElementById('note-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const noteInput = document.getElementById('note-input');
+    const colorInput = document.getElementById('color-input');
+
+    const noteText = noteInput.value;
+    const noteColor = colorInput.value;
+
+    if (noteText !== '') {
+        createNoteElement(noteText, noteColor);
+        noteInput.value = '';
+        colorInput.value = '';
+        noteInput.focus();
+    }
+});
+
+function createNoteElement(text, color) {
+    const noteList = document.getElementById('note-list');
+
+    const noteDiv = document.createElement('div');
+    noteDiv.className = 'note';
+    noteDiv.style.backgroundColor = color;
+
+    const noteText = document.createElement('p');
+    noteText.textContent = text;
+    noteDiv.appendChild(noteText);
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Видалити';
+    deleteBtn.addEventListener('click', function() {
+        noteDiv.remove();
+    });
+    noteDiv.appendChild(deleteBtn);
+
+    noteList.appendChild(noteDiv);
+}
